@@ -3,7 +3,8 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Deurff · Hecho con Astro y Claude
+	&copy; {today.getFullYear()} Deurff · Hecho con Astro y Claude ·
+	<a href="/rss.xml">RSS</a>
 </footer>
 
 <style>
@@ -12,5 +13,12 @@ const today = new Date();
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+	}
+	footer a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+	footer a:hover {
+		text-decoration: underline;
 	}
 </style>

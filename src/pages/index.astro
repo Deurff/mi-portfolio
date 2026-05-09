@@ -1,7 +1,9 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import banner from '../assets/banner.png';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -12,14 +14,23 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main class="home-main">
 			<section class="hero">
-				<h1>El D.o.C desarrolla</h1>
-				<p class="tagline">Construyendo con IA sin saber programar</p>
-				<p class="intro">
-					Soy Juan David, médico colombiano viviendo en Salamanca.
-					Aquí documento los proyectos que voy construyendo con
-					Claude, sin tener conocimientos de programación.
+				<div class="banner-wrap">
+					<Image src={banner} alt="Medicina y desarrollo" class="banner" />
+					<div class="banner-overlay"></div>
+				</div>
+				<div class="hero-text">
+					<h1>El D.o.C desarrolla</h1>
+					<p class="tagline">Construyendo con IA sin saber programar</p>
+				</div>
+			</section>
+
+			<section class="intro">
+				<p>
+					Soy <strong>Juan David</strong>, médico colombiano viviendo en Salamanca.
+					Aquí documento los proyectos que voy construyendo con Claude,
+					sin tener conocimientos de programación.
 				</p>
 				<p class="cta">
 					→ <a href="/blog">Ver los proyectos</a>
@@ -31,40 +42,54 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 </html>
 
 <style>
-	.hero {
-		max-width: 720px;
-		margin: 4rem auto;
-		padding: 0 1rem;
+	.home-main {
+		max-width: 1100px;
+		padding: 0 1rem 4rem;
 	}
-	.hero h1 {
-		font-size: 3rem;
-		margin-bottom: 0.5rem;
+	.hero {
+		position: relative;
+		margin-top: 2rem;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 12px 40px rgba(34, 211, 238, 0.15);
+	}
+	.banner-wrap { position: relative; line-height: 0; }
+	.banner { width: 100%; height: auto; display: block; }
+	.banner-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to bottom, rgba(13, 17, 23, 0) 40%, rgba(13, 17, 23, 0.95) 100%);
+	}
+	.hero-text {
+		position: absolute;
+		bottom: 1.5rem; left: 2rem; right: 2rem;
+		z-index: 2;
+	}
+	.hero-text h1 {
 		color: var(--accent);
+		font-size: 3rem;
+		margin: 0 0 0.3rem;
+		text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
 	}
 	.tagline {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 		color: rgb(var(--gray-dark));
-		margin-bottom: 2rem;
+		margin: 0;
 		font-weight: 300;
 	}
 	.intro {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 2rem;
+		max-width: 720px;
+		margin: 3rem auto 0;
+		font-size: 1.15rem;
+		line-height: 1.7;
+		text-align: center;
 	}
-	.cta {
-		font-size: 1.2rem;
-	}
-	.cta a {
-		color: var(--accent);
-		text-decoration: none;
-		border-bottom: 2px solid var(--accent);
-	}
-	.cta a:hover {
-		opacity: 0.8;
-	}
-	@media (max-width: 600px) {
-		.hero h1 { font-size: 2rem; }
-		.tagline { font-size: 1.1rem; }
+	.intro strong { color: var(--accent); }
+	.cta { font-size: 1.2rem; margin-top: 2rem; }
+	.cta a { border-bottom: 2px solid var(--accent); }
+	@media (max-width: 700px) {
+		.hero-text h1 { font-size: 1.8rem; }
+		.tagline { font-size: 1rem; }
+		.hero-text { bottom: 1rem; left: 1rem; right: 1rem; }
 	}
 </style>

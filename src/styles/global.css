@@ -34,8 +34,8 @@ body {
 	line-height: 1.7;
 }
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
+	width: 100%;
+	max-width: 1100px;
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -70,9 +70,11 @@ b {
 }
 a {
 	color: var(--accent);
+	text-decoration: none;
 }
 a:hover {
 	color: var(--accent);
+	text-decoration: underline;
 }
 p {
 	margin-bottom: 1em;

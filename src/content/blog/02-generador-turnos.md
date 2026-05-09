@@ -2,6 +2,7 @@
 title: 'Generador de turnos médicos: el proyecto que más me ha enseñado'
 description: 'Un algoritmo justo para repartir guardias entre 10 médicos, con vacaciones, descansos de 48h y semilla tipo Minecraft.'
 pubDate: '2026-05-09'
+tags: ['medicina', 'algoritmo', 'trabajo']
 ---
 
 En mi trabajo somos 10 médicos y cada mes hay que armar el cuadro

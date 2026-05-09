@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'El D.o.C desarrolla';
 export const SITE_DESCRIPTION = 'Construyendo con IA sin saber programar';
+

@@ -1,24 +1,96 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="Sobre mí"
-	description="Médico colombiano construyendo proyectos con Claude"
-	pubDate={new Date('May 09 2026')}
->
-	<p>
-		Soy Juan David, médico colombiano viviendo en Salamanca. La tecnología
-		siempre me fascinó, pero la medicina pudo más. Ahora, con herramientas
-		como Claude, he vuelto a esa afición vieja: programar pequeños proyectos
-		por hobby, aprendiendo sobre la marcha.
-	</p>
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={`Sobre mí · ${SITE_TITLE}`} description="Médico colombiano construyendo proyectos con Claude" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="about">
+				<h1>Sobre mí</h1>
+				<p class="lead">
+					Soy <strong>Juan David</strong>, médico colombiano
+					viviendo en Salamanca. Me llaman <strong>Deurff</strong>.
+				</p>
+				<p>
+					La tecnología siempre me fascinó, pero la medicina pudo
+					más. Ahora, con herramientas como Claude, he vuelto a
+					esa afición vieja: programar pequeños proyectos por
+					hobby, aprendiendo sobre la marcha.
+				</p>
+				<p>
+					Empecé como casi todos, jugando con ChatGPT. Después,
+					viendo en redes lo que se podía hacer y cómo la IA estaba
+					entrando en todas las profesiones —incluida la mía—,
+					decidí desempolvar la curiosidad. Probé Claude por puro
+					hype y me dejó sin palabras. Este blog documenta lo que
+					voy construyendo con su ayuda, sin saber programar de
+					verdad.
+				</p>
 
-	<p>
-		Empecé como casi todos, jugando con ChatGPT. Después, viendo en redes lo
-		que se podía hacer y cómo la IA estaba entrando en todas las profesiones
-		—incluida la mía—, decidí desempolvar la curiosidad. Probé Claude por
-		puro hype y me dejó sin palabras. Este blog documenta lo que voy
-		construyendo con su ayuda, sin saber programar de verdad.
-	</p>
-</Layout>
+				<h2>Mi stack</h2>
+				<ul class="stack">
+					<li><strong>Claude</strong> — mi compañero de pareja-programación</li>
+					<li><strong>VS Code</strong> — donde escribo todo</li>
+					<li><strong>GitHub</strong> — donde guardo el código</li>
+					<li><strong>Astro + Vercel</strong> — donde vive este blog</li>
+					<li><strong>Python</strong> — para mis programillas de utilidad</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 720px;
+	}
+	.about {
+		padding: 2rem 0;
+	}
+	.about h1 {
+		color: var(--accent);
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+	}
+	.about h2 {
+		color: var(--accent);
+		font-size: 1.6rem;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+	}
+	.lead {
+		font-size: 1.25rem;
+		color: rgb(var(--black));
+		margin-bottom: 1.5rem;
+	}
+	.lead strong {
+		color: var(--accent);
+	}
+	.about p {
+		font-size: 1.05rem;
+		line-height: 1.7;
+	}
+	.stack {
+		list-style: none;
+		padding: 0;
+	}
+	.stack li {
+		padding: 0.6rem 1rem;
+		margin-bottom: 0.5rem;
+		background: #161b22;
+		border-left: 3px solid var(--accent);
+		border-radius: 4px;
+	}
+	.stack strong {
+		color: var(--accent);
+	}
+</style>
