@@ -3,6 +3,7 @@ title: 'Una extensión de navegador para convertir simulacros del MIR en flashca
 description: 'Chrome y Firefox: copia preguntas, respuestas y comentarios para que NotebookLM o Claude generen flashcards.'
 pubDate: '2026-05-09'
 tags: ['mir', 'extension', 'estudio', 'flashcards']
+heroImage: '../../assets/banner-extension.png'
 ---
 
 Cuando corrijo un simulacro del MIR, lo último que quiero es estar

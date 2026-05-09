@@ -3,6 +3,7 @@ title: 'Una app para estudiar el MIR con Claude y Anki'
 description: 'Idea con un amigo: integrar transcripciones, manuales y flashcards automáticas, todo desde una sola interfaz.'
 pubDate: '2026-05-09'
 tags: ['medicina', 'mir', 'claude-api', 'estudio']
+heroImage: '../../assets/banner-mir.png'
 ---
 
 Estudiar el MIR es duro. Junto con Miguel se nos ocurrió una app

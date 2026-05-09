@@ -3,6 +3,7 @@ title: 'Mi primer programa: un cortador de PDFs'
 description: 'Una herramienta tonta y útil para trocear PDFs según yo decida.'
 pubDate: '2026-05-09'
 tags: ['utilidades', 'python', 'primer-proyecto']
+heroImage: '../../assets/banner-pdf.png'
 ---
 
 Mi primer proyecto con Claude fue resolver un problema que tenía
