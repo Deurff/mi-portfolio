@@ -32,7 +32,7 @@ Lo que más me sorprendió fue esto: cada vez que aparecía algo que yo no enten
 
 El resultado es esto:
 
-![Interfaz del Divisor de PDF]
+![Interfaz del Divisor de PDF](../../assets/divisor-pdf-ui.png)
 
 Una ventana con tres zonas:
 
