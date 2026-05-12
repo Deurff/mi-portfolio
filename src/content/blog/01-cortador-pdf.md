@@ -1,7 +1,7 @@
 ---
 title: 'Construí mi primer programa y no sé cómo funciona del todo'
 description: 'Cómo le pedí a Claude que me hiciera un cortador de PDFs desde cero, sin saber programar, y por qué eso me cambió algo por dentro.'
-pubDate: '2026-05-11'
+pubDate: '2026-05-09'
 tags: ['python', 'herramientas', 'primer-proyecto']
 heroImage: '../../assets/banner-pdf.png'
 ---
